@@ -1,0 +1,4 @@
+*.log
+STAGING_FOLDER/
+__pycache__/
+.vscode/

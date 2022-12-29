@@ -1,0 +1,30 @@
+#!/bin/sh
+
+char_count=$(wc -m "$1" | awk '{print $1}')
+char_count="${char_count}.0"
+
+echo "\nNumber of characters: $char_count"
+
+char_count_mil=$(echo $char_count/1000000.0 | bc -l)
+# echo "Number of characters in million: $char_count_mil"
+printf "Number of characters in million: %0.2fM\n" $char_count_mil
+echo
+
+est_cost_dollar=$(echo $char_count*0.000016 | bc)
+printf "Estimated cost in dollars for neural or wavenet: %0.2f\n" $est_cost_dollar
+est_cost=$(echo $est_cost_dollar*82.85 | bc)
+printf "Estimated cost in  rupees for neural or wavenet: %0.2f\n" $est_cost
+
+echo
+
+est_cost_dollar=$(echo $char_count*0.000004 | bc)
+printf "Estimated cost in    dollars for standard voice: %0.2f\n" $est_cost_dollar
+est_cost=$(echo $est_cost_dollar*82.85 | bc)
+printf "Estimated cost in     rupees for standard voice: %0.2f\n" $est_cost
+
+echo
+
+est_cost_dollar=$(echo $char_count*0.00002 | bc)
+printf "Estimated cost in dollars (IBM): %0.2f\n" $est_cost_dollar
+est_cost=$(echo $est_cost_dollar*82.85 | bc)
+printf "Estimated cost in  rupees (IBM): %0.2f\n" $est_cost

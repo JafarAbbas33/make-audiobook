@@ -1,0 +1,5 @@
+srt
+pdfminer.six
+pypandoc_binary
+tqdm
+google-cloud-texttospeech
