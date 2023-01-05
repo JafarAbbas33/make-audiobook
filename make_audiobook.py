@@ -168,7 +168,7 @@ def main():
     assert BOOK_FILE.exists(), 'File not found!'
     input('Please ensure your chunks directories are empty or deleted. Press enter to continue: ')
     print()
-    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'STAGING_FOLDER/AllProjects-ServiceAccountKey.json'
+    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'PATH_TO_YOUR/AllProjects-ServiceAccountKey.json'
     AUDIO_CHUNKS_DIR.mkdir(exist_ok=True)
     TEXT_CHUNKS_DIR.mkdir(exist_ok=True)
 

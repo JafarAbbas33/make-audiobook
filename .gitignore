@@ -1,4 +1,4 @@
 *.log
-STAGING_FOLDER/
+PATH_TO_YOUR/
 __pycache__/
 .vscode/
