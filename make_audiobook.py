@@ -27,7 +27,7 @@ MAX_CHARS_PER_MINUTE = 135000
 MAX_SEN_COUNT_PER_CHUNK = 2
 START_FROM_CHUNK = 0
 CREATE_SRT = True
-BOOK_FILE = Path('small_fixed.txt')
+BOOK_FILE = Path('PATH_TO_YOUR/Material/0/My Happy Marriage vol 1_fixed.txt')
 
 AUDIO_CHUNKS_DIR = Path('Audio_chunks')
 TEXT_CHUNKS_DIR = Path('Text_chunks')
@@ -175,7 +175,7 @@ def main():
     narrator = Narrator()
     narrator.text_file_to_mp3_file()
 
-    print("Generated:", MP3_FILE_NAME)
+    print("\nGenerated:", MP3_FILE_NAME)
     if input('Create video file too? (y/n): ') == 'y' : create_mp4()
 
 if __name__ == "__main__":

@@ -3,7 +3,9 @@ from pathlib import Path
 
 from pdfminer.high_level import extract_text
 
-def book_to_text_file(book_file):
+book_file = Path('PATH_TO_YOUR/Material/My Happy Marriage/My Happy Marriage vol 1.epub')
+
+def book_to_text_file():
     txt_path = Path(book_file).with_suffix(".txt")
 
     if book_file.endswith('.txt'):
@@ -24,5 +26,5 @@ def book_to_text_file(book_file):
                 f.write(text)
 
 if __name__ == '__main__':
-    book_to_text_file('PATH_TO_BOOK')
+    book_to_text_file()
     print('Conversion completed!')
