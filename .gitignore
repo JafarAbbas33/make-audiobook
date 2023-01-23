@@ -2,3 +2,5 @@
 PATH_TO_YOUR/
 __pycache__/
 .vscode/
+Audio_chunks/
+Text_chunks/
